@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* Coloco 0.1 por que sino se ve cortada la pagina con margen 0 */
+
+:root {
+    --azulOscuro: #16697A;
+    --azulMedio: #489FB5;
+    --azulClaro: #82C0CC;
+    --fondoClaro: #EDE7E3;
+    --amarillo: #FFA62B;
+    --negro: #212121;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #EDE7E3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.titulo {
+    font-size: 4.5rem;
+    text-align: center;
+    color: var(--azulOscuro);
+}
+
+.nav-bg {
+    background-color: var(--azulMedio);
+
+}
+
+header{
+    width: 100%;
+} 
+
+.navegacionPrincipal {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+@media (max-width: 760px ) {
+    .navegacionPrincipal{
+        flex-direction: column;
+    }
+   
+}
+
+.navegacionPrincipal a {
+    color: var(--fondoClaro);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+#buscador{
+    width: 35%;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 17px;
+}
+@media (max-width: 768px) {
+    #buscador{
+        width: 90%;
+    }
+   
+}
+
+.navegacionPrincipal a:hover {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    padding: 1rem;
+    cursor: pointer
+
+}
+
+.navSecundario {
+    padding: 2rem;
+    background-color: #EDE7E3;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navSecundario a {
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.navSecundario a:hover {
+    background-color: var(--azulOscuro);
+    color: var(--fondoClaro);
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.padreGrid {
+    display: grid;
+
+}
+
+
+.subtitulo {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--azulOscuro);
+}
+/* ESTILO A FORMULARIO*/
+
+form {
+    width:450px;
+    margin-right: 0;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+.formTittle{
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--azulOscuro);
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+form p {
+    margin-bottom: 20px; 
+    font-size: 1.7rem
+}
+
+.text{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-height: 100%;
+}
+
+.boton {
+    background: #16697A;
+    font-size: 2rem;
+    color: #EDE7E3;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.boton:hover {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    padding: 2.5rem;
+    cursor: pointer;
+}
+
+.textoInicial {
+    width: 600px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFA62B;
+}
+
+.imgPrincipal {
+    border: 2px solid #FFA621;
+    border-radius: 10px;
+}
+
+.imgSecundaria {
+    margin-right: 0;
+   height: 100%;
+    width: 100%; 
+   
+}
+
+
+/* Estilo de productos html*/
+.imgPosition {
+    display: grid;
+    grid-template-columns: 50rem 50rem 50rem;
+
+}
+
+.ofertasImg {
+    margin-top: 20px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.novedadesImg {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.divIframe {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color: var(--negro);
+    border: 3px solid var(--amarillo);
+}
+
+.divIframe iframe {
+    justify-content: center;
+}
+
+.marcas {
+    font-size: 3rem;
+    display: grid;
+    color: #FFA62B;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--negro);
+    border: 3px solid var(--amarillo);
+    list-style: none;
+    width: 60%;
+    font-weight: bolder;
+}
+
+footer {
+    width: 100%;
+    padding: 2rem;
+    font-weight: bold;
+    color: var(--fondoClaro);
+    text-align: center;
+    background-color: var(--azulMedio);
+}
+
+/* APLICAMOS GRID AREA paginas con formulario*/
+
+.bodyPadreGrid{
+    
+    display:grid;
+    grid-template-areas: 
+    " header header"
+    " imgSecundaria formulario  "
+    " footer footer ";
+}  
+
+header {
+    grid-area: header;
+}
+
+.imgSecundaria {
+    grid-area: imgSecundaria;
+}
+
+.formulario{
+    grid-area: formulario;
+}
+
+.footer
+{
+    grid-area: footer;
+}
+
+@media(max-width: 768px) {
+   .bodyPadreGrid{
+       
+       display: grid;
+       grid-template-areas: 
+       "header header"
+       "formulario formulario"
+       "footer footer";
+   }
+
+}
